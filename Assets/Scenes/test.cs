@@ -9,6 +9,8 @@ public class test : MonoBehaviour
         float height2;
         height2 = height1;
         Debug.Log(height2);
+
+        
     }
 
     // Update is called once per frame
