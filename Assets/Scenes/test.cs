@@ -6,10 +6,14 @@ public class test : MonoBehaviour
     void Start()
     {
         int answer;
-        answer = 1 + 2;
+        answer = 3 - 4;
+        Debug.Log(answer);
+        answer = 5 * 6;
+        Debug.Log(answer);
+        answer = 8 / 4;
         Debug.Log(answer);
 
-        
+
     }
 
     // Update is called once per frame
