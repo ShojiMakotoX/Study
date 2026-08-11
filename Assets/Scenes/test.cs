@@ -5,13 +5,12 @@ public class test : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int answer;
-        answer = 3 - 4;
+        int answer = 10;
+        answer += 5;
         Debug.Log(answer);
-        answer = 5 * 6;
-        Debug.Log(answer);
-        answer = 8 / 4;
-        Debug.Log(answer);
+        int answer2 = 10;
+        answer2++;
+        Debug.Log(answer2);
 
 
     }
