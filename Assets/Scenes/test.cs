@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class test : MonoBehaviour
@@ -5,10 +6,12 @@ public class test : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for(int i = 3;i<5;i++)
+        int sum = 0;
+        for(int i = 1;i<=10;i++)
         {
-            Debug.Log(i);
+            sum += i;
         }
+        Debug.Log(sum);
 
 
     }
