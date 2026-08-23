@@ -6,19 +6,27 @@ public class test : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int[] array = new int[5];//配列作成
-        //データ入力
-        array[0] = 2;
-        array[1] = 10;
-        array[2] = 5;
-        array[3] = 15;
-        array[4] = 3;
+        int[] points = { 83, 99, 52, 93, 15 };//配列作成
+        int sum = 0;
+       
+        
 
         //纏めて表示
-        for(int i = 0;i<5;i++)
+        for(int i = 0;i<points.Length;i++)
         {
-            Debug.Log(array[i]);
+            //90点以上を表示する
+            //if (points[i]>=90)
+            //{
+            //    Debug.Log(points[i]);
+            //}
+
+            //合計を求める
+            sum += points[i];
         }
+
+        //合計求めたものの平均を
+        int average = sum / points.Length;
+        Debug.Log(average);
 
 
     }
