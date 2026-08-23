@@ -3,31 +3,28 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+    void SayHello()//引数・返り値なしメソッド作成
+    {
+        Debug.Log("hello");
+    }
+    void CallName(string name)//引数ありメソッド作成
+    {
+        Debug.Log("Hello" + name);
+    }
+    int Add(int a,int b)//引数・返り値ありメソッド作成
+    {
+        int c = a + b;
+        return c;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int[] points = { 83, 99, 52, 93, 15 };//配列作成
-        int sum = 0;
-       
-        
+        SayHello();//呼び出し
+        CallName("Denshi");
 
-        //纏めて表示
-        for(int i = 0;i<points.Length;i++)
-        {
-            //90点以上を表示する
-            //if (points[i]>=90)
-            //{
-            //    Debug.Log(points[i]);
-            //}
-
-            //合計を求める
-            sum += points[i];
-        }
-
-        //合計求めたものの平均を
-        int average = sum / points.Length;
-        Debug.Log(average);
-
+        int answer;
+        answer = Add(2, 3);//値を拾って
+        Debug.Log(answer);//表示
 
     }
 
