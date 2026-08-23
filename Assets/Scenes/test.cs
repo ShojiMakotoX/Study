@@ -5,8 +5,12 @@ public class test : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int hp = 50;
-        if(hp>=100)
+        int hp = 180;
+        if(hp<=50)
+        {
+            Debug.Log("逃走");
+        }
+        else if(hp>= 200)
         {
             Debug.Log("攻撃");
         }
