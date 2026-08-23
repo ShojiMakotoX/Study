@@ -3,28 +3,29 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    void SayHello()//引数・返り値なしメソッド作成
+    public class Player//プレイヤークラスを作る（ここはc＋＋とはめちゃ違っているなと思う）
     {
-        Debug.Log("hello");
+        private int hp = 100;
+        private int power = 50;
+
+        public void Attack()//Attack関数の処理
+        {
+            Debug.Log(this.power + "のダメージを与えた");
+        }
+
+        public void Damage(int damage)//Damage関数の処理
+        {
+            this.hp -= damage;
+            Debug.Log(damage + "のダメージを受けた");
+        }
     }
-    void CallName(string name)//引数ありメソッド作成
-    {
-        Debug.Log("Hello" + name);
-    }
-    int Add(int a,int b)//引数・返り値ありメソッド作成
-    {
-        int c = a + b;
-        return c;
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
     void Start()
     {
-        SayHello();//呼び出し
-        CallName("Denshi");
-
-        int answer;
-        answer = Add(2, 3);//値を拾って
-        Debug.Log(answer);//表示
+        Player myPlayer = new Player();//プレイヤークラスが呼び出される
+        myPlayer.Attack();//アタック関数が呼び出される
+        myPlayer.Damage(30);//ダメージ関数が呼び出される
 
     }
 
